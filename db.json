@@ -1,0 +1,24 @@
+{
+  "products":[
+{
+  "id":0,
+    "title": "Polo",
+    "category":"T-shirt",
+    "image": "/../public/product-cover-4.png",
+    "colors":["red", "blue", "white"],
+    "price":10.24,
+    "itemNumber":5,
+    "description":"Met minim Mollie non desert Alamo est sit cliquey dolor met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met."
+  },
+{
+  "id":1,
+    "title": "Boss",
+    "category":"Jacket",
+    "image": "/../public/product-cover-5.png",
+    "colors":["yellow", "orange", "green"],
+    "price":10.24,
+    "itemNumber":6,
+    "description":"Met minim Mollie non desert Alamo est sit cliquey dolor met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met."
+
+  }]
+}

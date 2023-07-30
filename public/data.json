@@ -1,0 +1,14 @@
+[{
+  "title": "polo",
+  "category":"T-shirt",
+  "image": "/../public/product-cover-4.png",
+  "colors":["red", "blue", "white"],
+  "price":10.24
+},
+{
+  "title": "polo",
+  "category":"T-shirt",
+  "image": "/../public/product-cover-5.png",
+  "colors":["red", "blue", "white"],
+  "price":10.24
+}]
