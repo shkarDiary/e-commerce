@@ -13,7 +13,6 @@ const getData = async (id: string = "error") => {
   console.log(data);
   return data;
 };
-
 export default function page() {
   const { addItemToCart, cartItems } = useCart();
   const path = usePathname();
