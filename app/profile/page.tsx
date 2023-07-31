@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import Button from "../components/Button";
-import { useUser } from "../context/user";
+import { useUser } from "../context/User";
 
 export default function Profile() {
   const [profile, setProfile] = useState({ name: "" });
