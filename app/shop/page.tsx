@@ -1,7 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Product from "../components/Product";
-import data from "../../public/Data.json";
 import Category from "../components/Category";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import { SiWindows11 } from "react-icons/si";
