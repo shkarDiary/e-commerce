@@ -93,6 +93,7 @@ export default function Shop() {
               <div
                 className="cursor-pointer"
                 onClick={() => router.push(`shop/${index}`)}
+                key={index}
               >
                 <Product
                   title={product.title}

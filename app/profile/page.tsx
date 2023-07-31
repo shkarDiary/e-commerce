@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import Button from "../components/Button";
-import { useUser } from "../context/User";
+import { useUser } from "../context/user";
 
 export default function Profile() {
   const [profile, setProfile] = useState({ name: "" });
@@ -13,7 +13,7 @@ export default function Profile() {
 
     // Decode the token to get the user's profile information
     if (token) {
-      const decodedProfile = jwtDecode(token);
+      const decodedProfile = jwtDecode(token) as { [key: string]: any };
       console.log(decodedProfile);
       setProfile({ name: decodedProfile.name });
     }

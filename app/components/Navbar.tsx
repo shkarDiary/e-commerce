@@ -7,7 +7,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import jwtDecode from "jwt-decode";
 import { useCart } from "../context/cart";
-import { useUser } from "../context/User";
+import { useUser } from "../context/user";
 
 const pacifico = Pacifico({ subsets: ["cyrillic"], weight: ["400"] });
 
@@ -23,7 +23,8 @@ export default function Navbar() {
     if (user.token) {
       setIsLogged(true);
       console.log(jwtDecode(user.token));
-      setName(jwtDecode(user.token).name);
+      const decodedToken = jwtDecode(user.token) as { [key: string]: any };
+      setName(decodedToken.name);
     } else {
       setIsLogged(false);
     }

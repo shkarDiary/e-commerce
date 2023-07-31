@@ -22,8 +22,8 @@ const CartContext = createContext<CartContextValue>({
 });
 
 // Custom hook to access the cart context easily in functional components
-export const useCart = () => {
-  useContext(CartContext);
+export const useCart = (): CartContextValue => {
+  return useContext(CartContext);
 };
 
 // CartProvider component that wraps the app and provides cart functionality

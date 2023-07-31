@@ -209,4 +209,4 @@ function Regiseter() {
   );
 }
 
-export default Login;
+export default Regiseter;
