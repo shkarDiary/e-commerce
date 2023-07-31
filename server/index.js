@@ -15,7 +15,31 @@ mongoose.connect(
     useUnifiedTopology: true,
   }
 );
-
+app.post("/api/items", async (req, res) => {
+  console.log(req.body);
+  try {
+    const user = await User.findOne({
+      email: req.body.email,
+      password: req.body.password,
+    });
+    if (user) {
+      const token = jwt.sign(
+        {
+          name: user.name,
+          email: user.email,
+        },
+        "secret123"
+      );
+      console.log(token);
+      res.json({ status: "ok", user: token });
+    } else {
+      res.json({ status: "400" });
+    }
+  } catch (error) {
+    res.json({ status: "error", error: error });
+    console.error(error);
+  }
+});
 app.post("/api/register", async (req, res) => {
   console.log(req.body);
 
