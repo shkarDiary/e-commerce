@@ -4,7 +4,7 @@ import { Montserrat } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Providers from "./ReactQueryProvider";
 import { ReduxProvider } from "./redux/ReduxProvider";
-import AuthProvider from "./context/User";
+import AuthProvider from "./context/user";
 import { CartProvider } from "./context/cart";
 const montserrat = Montserrat({
   subsets: ["latin"],

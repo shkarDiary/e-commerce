@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Pacifico } from "next/font/google";
 import { BsFillPersonFill } from "react-icons/bs";
-import { useUser } from "../context/User";
+import { useUser } from "../context/user";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import jwtDecode from "jwt-decode";
 import { useCart } from "../context/cart";
