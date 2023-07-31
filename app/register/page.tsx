@@ -29,7 +29,7 @@ const sendData = async (name: string, email: string, password: string) => {
   console.log(data);
 };
 
-function Login() {
+function Regiseter() {
   const userRef: RefObject<HTMLInputElement> = useRef(null);
   const errRef: RefObject<HTMLParagraphElement> = useRef(null);
 

@@ -14,7 +14,7 @@ const getData = async () => {
   return data;
 };
 
-export default function page() {
+export default function Shop() {
   const { isLoading, error, data } = useQuery({
     queryKey: ["data"],
     queryFn: getData,

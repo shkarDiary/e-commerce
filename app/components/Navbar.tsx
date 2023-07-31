@@ -27,12 +27,10 @@ export default function Navbar() {
     } else {
       setIsLogged(false);
     }
-    console.log(isLogged);
   }, [user]);
 
   useEffect(() => {
     setItems(cartItems.length);
-    console.log(items);
   }, [cartItems]);
 
   const pathName = usePathname();

@@ -85,7 +85,7 @@ function Login() {
             Login
           </Button>
           <div className="text-center  text-text">
-            <h4>Don't have an account?</h4>
+            <h4>Don&apos;t have an account?</h4>
             <Link
               href="register"
               className="cursor-pointer hover:text-blue-300 transition-all duration-300 text-primary text-[20px]"
