@@ -34,7 +34,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (email: string, password: string) => {
     try {
       // Send login request to the server to get the authentication token
-      const response = await axios.post("http://localhost:1337/api/login", {
+      const response = await axios.post("/api/auth/login", {
         email,
         password,
       });

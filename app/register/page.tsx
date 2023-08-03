@@ -1,5 +1,5 @@
 "use client";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { FormEvent, RefObject, useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import Link from "next/link";
 import axios from "axios";
@@ -12,7 +12,7 @@ const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
 const REGISTER_URL = "/register";
 const sendData = async (name: string, email: string, password: string) => {
   const response = await axios.post(
-    "http://localhost:1337/api/register",
+    "/api/auth/register",
     {
       name,
       email,
@@ -77,11 +77,16 @@ function Regiseter() {
     setErrMsg("");
   }, [pwd, name, email]);
 
+  function handleButtonClick(event: FormEvent<HTMLFormElement>): void {
+    event.preventDefault();
+    sendData(name, email, pwd);
+  }
+
   return (
     <div className=" min-h-screen bg-gray-100 py-10">
       <div className="flex  justify-center items-center ">
         <form
-          // onSubmit={handleButtonClick}
+          onSubmit={handleButtonClick}
           className="border flex flex-col py-10 px-8 space-y-10 bg-white w-[350px] rounded-lg shadow-lg"
         >
           <h1 className="text-center font-bold text-4xl">Regiseter</h1>

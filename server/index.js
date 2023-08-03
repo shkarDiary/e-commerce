@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-const User = require("./models/user.model.js"); // Update the import to the correct User model
+const User = require("../models/user.model.js/index.js"); // Update the import to the correct User model
 const jwt = require("jsonwebtoken");
 
 app.use(cors());
